@@ -1,0 +1,499 @@
+body {
+    margin:0;
+    background: #fff;
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+    line-height: 24px;
+    color:#333;
+}
+ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,p,input,button {
+    margin:0;
+    padding:0;
+}
+button{
+    border: none;
+}
+ul,ol {
+    list-style: none;
+}
+input,button {
+    font-family: "Microsoft YaHei";
+}
+a {
+
+    text-decoration: none;
+}
+a:hover {
+
+    text-decoration: none;
+}
+.clearfloat:after {
+    content: " ";
+    display: table;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.login-body {
+    background: #65cea7 url("../img/login-bg.jpg") no-repeat fixed;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.form-signin {
+    max-width: 330px;
+    margin: 100px auto;
+    background: #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+.form-signin .form-signin-heading {
+    margin: 0;
+    padding: 25px 15px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.sign-title {
+    font-size: 24px;
+    color: #fff;
+    position: absolute;
+    top: -60px;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.form-signin .checkbox {
+    margin-bottom: 14px;
+    font-size: 13px;
+}
+
+.form-signin .checkbox {
+    font-weight: normal;
+    color: #fff;
+    font-weight: normal;
+    font-family: 'Open Sans', sans-serif;
+    position: absolute;
+    bottom: -50px;
+    width: 100%;
+    left: 0;
+}
+
+.form-signin .checkbox a, .form-signin .checkbox a:hover {
+    color: #fff;
+}
+
+.form-signin .form-control {
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+
+.form-signin input[type="text"], .form-signin input[type="password"] {
+    margin-bottom: 15px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: 1px solid #eaeaec;
+    background: #eaeaec;
+    box-shadow: none;
+    font-size: 12px;
+}
+
+.form-signin .btn-login {
+    background: #6bc5a4;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-family: 'Open Sans', sans-serif;
+    margin: 20px 0 5px;
+    padding: 5px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    font-size: 30px;
+}
+
+.form-signin .btn-login:hover {
+    background: #688ac2;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.form-signin p {
+    text-align: left;
+    color: #b6b6b6;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.form-signin a, .form-signin a:hover {
+    color: #6bc5a4;
+}
+
+.form-signin a:hover {
+    text-decoration: underline;
+}
+
+.login-wrap {
+    padding: 20px;
+    position: relative;
+}
+
+.login-wrap div{
+    display: none;
+    color: red;
+    text-align: center;
+}
+
+
+
+
+.left{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 240px;
+    min-height: 1120px;
+    /*border: 1px solid #333333;*/
+    color: #fff;
+    background-color: #483E55;
+}
+.inner{
+    margin: 10px 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+.left_head{
+    display: flex;
+    width: 100%;
+    margin-bottom: 40px;
+    font-size: 46px;
+    align-items: center;
+    justify-content: center;
+}
+.left_head img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.nav_list{
+    width: 220px;
+    margin: 20px auto;
+}
+.nav_list a{
+    width: 220px;
+    height: 40px;
+    line-height:40px;
+}
+.item{
+    width: 186px;
+    /*margin: 0 35px;*/
+    color: #fff;
+}
+.item img{
+    margin: 0 24px;
+}
+.left_title{
+    margin-left: 24px;
+    color: #9D98A4;
+}
+.m_bottom{
+    margin-bottom: 15px;
+}
+.nav_list>div:hover{
+    background-color: #534666;
+}
+.arrow{
+    float: right;
+    /*margin-right: 40px;*/
+}
+/*用户信息*/
+.userInfo img{
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+.right{
+    margin-left: 220px;
+    margin-top: 50px;
+    min-height: 880px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/*主要内容*/
+.main_container{
+    /*width: 100%;*/
+
+    margin-left: 80px;
+    box-sizing: border-box;
+    font-size: 16px;
+
+}
+.control_tile{
+    font-size: 26px;
+    line-height: 36px;
+}
+.control_tile button{
+    margin-left: 80px;
+}
+.time_select1{
+    box-sizing: border-box;
+    height:1.4em;
+    line-height: 1.4em;
+    width:500px;
+    margin-top: 20px;
+}
+.time_select1 ul{
+    float: right;
+}
+.time_select1 ul li{
+    border: 1px solid #000;
+    width:100px;
+    text-align: center;
+    padding: 1px 4px;
+    border-radius: 10px;
+    float: left;
+    margin-right: 20px;
+    line-height: 1.4em;
+    cursor: pointer;
+}
+.time_area{
+    margin-top: 20px;
+    line-height: 1.4em;
+    vertical-align: middle;
+    position: relative;
+}
+.time_area input{
+    border: none;
+}
+.form_datetime1,.form_datetime2{
+    opacity: 1;
+
+}
+.datetime{
+    position: absolute;
+    left:120px;
+    top:50%;
+}
+.datetime2{
+    position: absolute;
+    left:380px;
+    top:50%;
+}
+.curr{
+    color: #0066DC;
+}
+#visitMap{
+    margin-top: 50px;
+}
+
+.table th{
+    text-align: center;
+}
+.table{
+    margin-top: 20px;
+    text-align: center;
+}
+.tabke_title{
+    color: #0066DC;
+    font-weight: bold;
+}
+.searchInput{
+    font-size: 18px;
+    width:260px;
+    height:36px;
+    border-radius: 10px;
+}
+.u_info{
+    height:80px;
+    line-height: 40px;
+    width:50%;
+    margin-top: 20px;
+}
+#state{
+    /*border-radius: 10px;*/
+    font-size: 20px;
+    margin-left: 40px;
+}
+.ua_title{
+    width:80%;
+    font-size: 26px;
+    line-height: 1.8em;
+    text-align: center;
+}
+.ua_option{
+    width:80%;
+    margin-top: 30px;
+    overflow: hidden;
+}
+.ua_option li{
+    float: left;
+    font-size: 20px;
+    width:20%;
+    cursor: pointer;
+}
+.curr_sel{
+    color: #0066DC;
+    text-decoration: underline;
+}
+.data_pick{
+    display: inline-block;
+    position: relative;
+    margin-left: 20px;
+    font-size: 20px;
+}
+.data_pick input{
+    border:none;
+}
+
+.searchUser{
+    display: inline-flex;
+    align-items: center;
+    width:250px;
+    position: relative;
+    height: 30px;
+    font-size: 20px;
+    margin-left: 50px;
+    border:1px solid #000000;
+    box-sizing: border-box;
+}
+.searchUser input{
+    height: 26px;
+    width:200px;
+    font-size: 16px;
+    border:none;
+    float: left;
+}
+.searchUser span{
+    float: right;
+    height:28px;
+    line-height: 30px;
+    padding: 0 8px;
+    font-size: 16px;
+    background-color: #999;
+    cursor: pointer;
+}
+
+.tip{
+    visibility: hidden;
+}
+#addBtn{
+    width:200px;
+    margin-left: 100px;
+    margin-top: 30px;
+}
+
+#province,#allCities,#model,#model_detail{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+/*分页*/
+.page_part{
+    margin-top: 10px;
+    width: 70%;
+    text-align: center;
+}
+.desc{
+    float: left;
+}
+.pages{
+    display: inline-block;
+    border-radius: 4px;
+}
+.pages>li{
+    display: inline;
+}
+.arrow_left{
+    margin: 3px 8px 4px 0;
+    border-left: 5px dashed transparent;
+    border-bottom: 5px dashed transparent;
+    border-top: 5px dashed transparent;
+    border-right: 5px solid #ccc;
+    display: inline-block;
+    vertical-align: middle;
+}
+.arrow_right{
+    margin: 3px 0 4px 8px;
+    border-top: 5px dashed transparent;
+    border-bottom: 5px dashed transparent;
+    border-right: 5px dashed transparent;
+    border-left: 5px solid #ccc;
+    display: inline-block;
+    vertical-align: middle;
+}
+.pages>li>a:hover{
+    background-color:#eee;
+}
+.pages>li:first-child>a{
+    margin-left: 0;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+}
+.pages>li>a{
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    line-height: 1.42857143;
+    text-decoration: none;
+    color: #428bca;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-left: -1px
+}
+.pages>.active>a{
+    z-index: 2;
+    color: #fff;
+    background-color: #428bca;
+    border-color: #428bca;
+    cursor: default;
+}
+.pages>.active>a:hover{
+    color: #fff;
+    background-color: #428bca;
+    border-color: #428bca;
+}
+/*页脚*/
+.footer{
+    float: right;
+    width:90%;
+    margin-top: 50px;
+    height: 120px;
+    text-align: center;
+    background-color:#999999 ;
+    color: #fff;
+}
+.footer div{
+    margin-bottom: 6px;
+}
+
+
+.company_contact{
+    width: 200px;
+}

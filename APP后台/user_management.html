@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>用户信息</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/mycss.css"/>
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
+
+</head>
+<body>
+<div class="left">
+</div>
+<div class="right">
+    <div class="main_container">
+        <div class="control_tile" style="width: 90%">用户信息
+            <button class="btn  btn-info" style="float: right">导出</button>
+            <div class="searchUser" style="float: right"><input type="text" placeholder="身份证号/手机号" class="searchInput"><span>搜索</span></div>
+
+        </div>
+        <table class="table table-bordered" style="width: 99%">
+            <tr class="tabke_title">
+                <td class="col-md-1">姓名</td>
+                <td class="col-md-2">身份证号</td>
+                <td class="col-md-1">手机号</td>
+                <td class="col-md-1">微信号</td>
+                <td class="col-md-1">QQ号</td>
+                <td class="col-md-2">银行卡号</td>
+                <td class="col-md-1">地址</td>
+                <td class="col-md-1">云信用分</td>
+                <td class="col-md-2">负债情况及还款记录</td>
+            </tr>
+            <tr>
+                <td>张三</td>
+                <td>342625199901234567</td>
+                <td>18510980147</td>
+                <td>18510980147</td>
+                <td>1090551944</td>
+                <td>6228480010982473525</td>
+                <td>安徽省</td>
+                <td>600</td>
+                <td><a href="huankuan.html" target="_blank">查看</a></td>
+            </tr>
+        </table>
+        <div class="page_part" style="width: 80%; ">
+            <div class="desc"> 共  页</div>
+            <ul class="pages">
+                <li class="first"><a href="javascript:;">首页</a></li>
+                <li class="prev"><a href="javascript:;"><i class="arrow_left"></i>上一页</a></li>
+                <li class="page active"><a href="javascript:;">1</a></li>
+                <li class="page"><a href="javascript:;">2</a></li>
+                <li class="page"><a href="javascript:;">3</a></li>
+                <li class="page"><a href="javascript:;">4</a></li>
+                <li class="page"><a href="javascript:;">5</a></li>
+                <li class="next"><a href="javascript:;">下一页<i class="arrow_right"></i></a></li>
+                <li class="last"><a href="javascript:;">末页</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="footer">
+
+</div>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
+<script src="js/myjs.js"></script>
+<script>
+    $(function(){
+        $(".left").load("header.html")
+        $(".footer").load("footer.html")
+    })
+</script>
+</body>
+</html>

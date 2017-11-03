@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>流量管理</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/mycss.css"/>
+    <style>
+
+    </style>
+</head>
+<body>
+<div class="left">
+
+</div>
+<div class="right">
+    <div class="right_top">
+        <div><img src="img/logo.jpg" alt=""/><text>创新小小贷</text>&nbsp;&nbsp;&nbsp;&nbsp;<a href="" class="logout">退出</a></div>
+    </div>
+    <div class="main_container">
+        <div class="titlebar">流量管理</div>
+        <div style="display: inline-block;margin-top:30px;margin-bottom: 60px" >
+            <form action="">
+                <label for="fileUpload">数据上传：</label><input type="file" id="fileUpload" style="display: inline-block">
+                <input type="submit" class="btn btn-primary">
+            </form>
+        </div>
+        <div style="margin-top: 50px">
+            <div class="titlebar" style="margin-bottom: 30px">流量分配</div>
+            <form action="">
+                <label for="companyName">公司名：</label><input type="text" id="companyName" style="margin-right: 100px">
+                <label for="flowNum">分配流量：</label><input type="number" id="flowNum" style="margin-right: 100px">
+                <input type="submit" class="btn btn-primary">
+            </form>
+        </div>
+    </div>
+</div>
+<div class="footer">
+
+</div>
+<script src="js/jquery-1.8.3.min.js"></script>
+
+<script>
+    $(function(){
+        $(".left").load("header.html")
+        $(".footer").load("footer.html")
+    })
+</script>
+</body>
+</html>

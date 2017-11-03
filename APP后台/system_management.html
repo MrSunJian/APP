@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>用户管理</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/mycss.css"/>
+    <style>
+
+
+    </style>
+</head>
+<body>
+<div class="left">
+
+</div>
+<div class="right">
+
+    <div class="main_container">
+
+
+            <div class="col-lg-8">
+                <section>
+                    <header class="titlebar">
+                        添加管理员
+                    </header>
+                    <div>
+                        <form class="form-horizontal" role="form">
+                            <div class="form-group">
+                                <label for="inputName" class="col-md-2 col-sm-2 control-label">用户名</label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control" id="inputName" placeholder="用户名"><em></em>
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword" class="col-md-2 col-sm-2 control-label">密码</label>
+                                <div class="col-md-4">
+                                    <input type="password" class="form-control" id="inputPassword" placeholder="密码"><em></em>
+                                    <!--<p class="help-block">Example block-level help text here.</p>-->
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <div class="col-lg-offset-2 col-lg-10">
+                                    <button id="userAdd" type="submit" class="btn btn-primary">添加</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </div>
+
+            <div class="col-md-8 userList" >
+                <section>
+                    <header class="titlebar">
+                        用户信息列表
+                    </header>
+                    <div>
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th class="col-md-4">用户名</th>
+                                <th>用户类型</th>
+                                <th class="col-md-6" colspan="2">操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>sunjian</td>
+                                    <td>管理员</td>
+                                    <td><a href="reset.html"><button  class='btn btn-sm btn-danger reset'>修改密码</button></a></td>
+                                    <td><button  class='btn btn-sm btn-danger delet'>删除</button></td>
+                                </tr>
+                                <tr>
+                                    <td>sunjian</td>
+                                    <td>普通管理员</td>
+                                    <td><a href="reset.html"><button  class='btn btn-sm btn-danger reset'>修改密码</button></a></td>
+                                    <td><button  class='btn btn-sm btn-danger delet'>删除</button></td>
+                                </tr>
+                                <tr>
+                                    <td>sunjian</td>
+                                    <td>普通管理员</td>
+                                    <td><a href="reset.html"><button  class='btn btn-sm btn-danger reset'>修改密码</button></a></td>
+                                    <td><button  class='btn btn-sm btn-danger delet'>删除</button></td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                        <div class="page_part" style="width: 100%; ">
+                            <ul class="pages">
+                                <li class="first"><a href="javascript:;">首页</a></li>
+                                <li class="prev"><a href="javascript:;"><i class="arrow_left"></i>上一页</a></li>
+                                <li class="page active"><a href="javascript:;">1</a></li>
+                                <li class="page"><a href="javascript:;">2</a></li>
+                                <li class="page"><a href="javascript:;">3</a></li>
+                                <li class="page"><a href="javascript:;">4</a></li>
+                                <li class="page"><a href="javascript:;">5</a></li>
+                                <li class="next"><a href="javascript:;">下一页<i class="arrow_right"></i></a></li>
+                                <li class="last"><a href="javascript:;">末页</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+            </div>
+            <!--<div class="col-lg-8">-->
+                <!--<section class="panel">-->
+                    <!--<header class="panel-heading">-->
+                        <!--数据上传-->
+                    <!--</header>-->
+                    <!--<label for="data" class="col-md-2 col-sm-2 control-label">文件选择</label>-->
+                    <!--<input type="file"  id="data"><em></em>-->
+                <!--</section>-->
+            <!--</div>-->
+        </div>
+
+
+<div class="footer">
+
+</div>
+<script src="js/jquery-1.8.3.min.js"></script>
+
+<script>
+    $(function(){
+        $(".left").load("header.html")
+        $(".footer").load("footer.html")
+    })
+    $(".delet").click(function(){
+        var msg="您真的确定要删除吗？\n\n请确认！"
+        if(confirm(msg)==true){
+            return true
+        }else{
+            return false;
+        }
+    })
+
+</script>
+</body>
+</html>

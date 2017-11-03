@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/mycss.css"/>
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
+    
+</head>
+<body>
+<div class="left">
+</div>
+<div class="right">
+    <!--<div class="right_top">-->
+        <!--<div><img src="img/logo.jpg" alt=""/><text>创新小小贷</text>&nbsp;&nbsp;&nbsp;&nbsp;<a href="" class="logout">退出</a></div>-->
+    <!--</div>-->
+    <div class="main_container">
+        <div class="control_tile">实时统计</div>
+        <div class="time_select1">
+            <div style="float: left">时间粒度</div>
+            <div style="float: left;margin-left: 20px">
+                <ul>
+                    <li class="curr">1小时</li>
+                    <li>2小时</li>
+                    <li>3小时</li>
+                </ul>
+            </div>
+        </div>
+        <div class="time_area">
+            <input type="text" value="2017-9-22" class="form_datetime" readonly id="yesterday"> <img src="img/u97.png" class="datetime" alt=""> <text style="margin: 0 50px 0 20px" >到</text> <input type="text" value="2017-09-22" class="form_datetime" id="today" readonly><img src="img/u97.png" class="datetime2" alt="">
+        </div>
+        <div id="visitMap" style="width: 1100px;height:600px;">
+
+        </div>
+    </div>
+</div>
+<div class="footer">
+
+</div>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
+<script src="js/echarts.common.min.js"></script>
+<script src="js/myjs.js"></script>
+<script>
+    $(function(){
+        $(".left").load("header.html")
+        $(".footer").load("footer.html")
+
+//        data = [["2000-06-05",116],["2000-06-06",129],["2000-06-07",135],["2000-06-08",86],["2000-06-09",73],["2000-06-10",85],["2000-06-11",73],["2000-06-12",68],["2000-06-13",92],["2000-06-14",130],["2000-06-15",245],["2000-06-16",139],["2000-06-17",115],["2000-06-18",111],["2000-06-19",309],["2000-06-20",206],["2000-06-21",137],["2000-06-22",128],["2000-06-23",85],["2000-06-24",94],["2000-06-25",71],["2000-06-26",106],["2000-06-27",84],["2000-06-28",93],["2000-06-29",85],["2000-06-30",73],["2000-07-01",83],["2000-07-02",125],["2000-07-03",107],["2000-07-04",82],["2000-07-05",44],["2000-07-06",72],["2000-07-07",106],["2000-07-08",107],["2000-07-09",66],["2000-07-10",91],["2000-07-11",92],["2000-07-12",113],["2000-07-13",107],["2000-07-14",131],["2000-07-15",111],["2000-07-16",64],["2000-07-17",69],["2000-07-18",88],["2000-07-19",77],["2000-07-20",83],["2000-07-21",111],["2000-07-22",57],["2000-07-23",55],["2000-07-24",60]];
+//
+//        var dateList = data.map(function (item) {
+//            return item[0];
+//        });
+//        var valueList = data.map(function (item) {
+//            return item[1];
+//        });
+//
+//        console.log(dateList)
+//        console.log(valueList)
+
+    })
+    var today = new Date();
+    var nowDay=today.format("yyyy-MM-dd");
+    $("#today").val(nowDay)
+    console.log(nowDay)
+    today.setDate(today.getDate() - 1);
+    var yesterday = today.format("yyyy-MM-dd");
+    console.log(yesterday)
+    $("#yesterday").val(yesterday)
+
+
+    var myChart = echarts.init(document.getElementById('visitMap'))
+    var option = {
+        title: {
+            text: 'APP访问次数'
+        },
+        tooltip: {
+            trigger: 'axis'
+        },
+        legend: {
+            data:['当前访问次数','一天前访问次数']
+        },
+        toolbox: {
+            show: false,
+        },
+        xAxis:  {
+            type: 'category',
+            boundaryGap: false,
+            data: ['0点','2点','4点','6点','8点','10点','12点','14点','16点','18点','20点','22点']
+        },
+        yAxis: {
+            type: 'value',
+            axisLabel: {
+                formatter: '{value} 次'
+            }
+        },
+        series: [
+            {
+                name:'当前访问次数',
+                type:'line',
+                data:[11, 11, 15, 13, 12, 13, 10,10,15,20,11,19],
+//                markPoint: {
+//                    data: [
+//                        {type: 'max', name: '最大值'},
+//                        {type: 'min', name: '最小值'}
+//                    ]
+//                },
+//                markLine: {
+//                    data: [
+//                        {type: 'average', name: '平均值'}
+//                    ]
+//                }
+            },
+            {
+                name:'一天前访问次数',
+                type:'line',
+                data:[1, 15, 2, 5, 3, 2, 0,9,11,13,19,6],
+                markPoint: {
+                    data: [
+                        {name: '周最低', value: -2, xAxis: 1, yAxis: -1.5}
+                    ]
+                },
+//                markLine: {
+//                    data: [
+//                        {type: 'average', name: '平均值'},
+//                        [{
+//                            symbol: 'none',
+//                            x: '90%',
+//                            yAxis: 'max'
+//                        }, {
+//                            symbol: 'circle',
+//                            label: {
+//                                normal: {
+//                                    position: 'start',
+//                                    formatter: '最大值'
+//                                }
+//                            },
+//                            type: 'max',
+//                            name: '最高点'
+//                        }]
+//                    ]
+//                }
+            }
+        ]
+    };
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+
+</script>
+</body>
+</html>
